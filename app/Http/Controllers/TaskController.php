@@ -133,7 +133,7 @@ class TaskController extends Controller
 
         $task->save();
 
-        return response()->json(['message' => 'Task updated successfully.', 'task'=> $task], 201);
+        return response()->json(['message' => 'Task updated successfully.', 'task'=> $task], 200);
 
     }
 
@@ -155,7 +155,7 @@ class TaskController extends Controller
 
         $task->delete();
 
-        return response()->json(['message' => 'Task deleted successfully.'], 201);
+        return response()->json(['message' => 'Task deleted successfully.'], 200);
 
     }
 }
