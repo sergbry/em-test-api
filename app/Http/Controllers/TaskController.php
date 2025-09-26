@@ -19,11 +19,11 @@ class TaskController extends Controller
         // Проверка наличия задач
         if($tasks->isEmpty()) {
             // Задачи отсутствуют - отдаём ошибку 404
-            return response()->json(['message' => 'No tasks found.'], 404);
+            return response()->json(['tasks' => []]);
         }
 
         // Отдаём все задачи
-        return response()->json(['tasks'=> $tasks], 200);
+        return response()->json(['tasks'=> $tasks]);
     }
 
     /**
